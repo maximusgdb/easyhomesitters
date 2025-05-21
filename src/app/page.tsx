@@ -1,26 +1,15 @@
 import Image from "next/image";
 
 const cleaners = [
-  {
-    name: "Alice Johnson",
-    rating: 4.9,
-    description: "Expert in deep cleaning and eco-friendly products. 5 years of experience.",
-  },
-  {
-    name: "Carlos Martinez",
-    rating: 4.7,
-    description: "Specializes in apartments and small homes. Reliable and friendly.",
-  },
-  {
-    name: "Fatima Noor",
-    rating: 5.0,
-    description: "Top-rated for attention to detail and punctuality. Flexible scheduling.",
-  },
-  {
-    name: "Sophie Dubois",
-    rating: 4.8,
-    description: "Great with pets and families. Uses hypoallergenic products.",
-  },
+  { id: 'alice', name: 'Alice', experience: 5, rating: 4.8 },
+  { id: 'carlos', name: 'Carlos', experience: 3, rating: 4.5 },
+  { id: 'fatima', name: 'Fatima', experience: 4, rating: 4.7 },
+  { id: 'sophie', name: 'Sophie', experience: 2, rating: 4.3 },
+  { id: 'marco', name: 'Marco', experience: 6, rating: 4.9 },
+  { id: 'linda', name: 'Linda', experience: 1, rating: 4.1 },
+  { id: 'yuki', name: 'Yuki', experience: 7, rating: 4.6 },
+  { id: 'samir', name: 'Samir', experience: 3, rating: 4.2 },
+  { id: 'elena', name: 'Elena', experience: 5, rating: 4.4 },
 ];
 
 export default function Home() {
@@ -34,7 +23,7 @@ export default function Home() {
               <div className="flex-1">
                 <div className="text-xl font-semibold">{cleaner.name}</div>
                 <div className="text-yellow-500 font-medium">Rating: {cleaner.rating} ⭐</div>
-                <div className="text-neutral-600 dark:text-neutral-300 mt-1">{cleaner.description}</div>
+                <div className="text-neutral-600 dark:text-neutral-300 mt-1">{cleaner.experience} years of experience</div>
               </div>
             </li>
           ))}
